@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EditorActivity">
+
+    <item
+        android:id="@+id/action_saveInfo"
+        android:icon="@drawable/icon_check"
+        android:title="@string/save"
+        android:tooltipText="@string/saveChanges"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Inventory App</string>
+    <string name="dummy_infoTextView">The information collected is as follows :</string>
+    <string name="device_name">Device Name</string>
+    <string name="pricing">Pricing</string>
+    <string name="quantity">No.of models</string>
+    <string name="supplier__info">Supplier Information</string>
+    <string name="supplier_Name">Supplier Name</string>
+    <string name="contact">Supplier Contact No.</string>
+    <string name="informaation">Device Information</string>
+    <string name="save">Save</string>
+    <string name="saveChanges">Save the Changes made</string>
+    <string name="field_error">Please enter the required field</string>
+    <string name="cost_error">Cost can never be negative</string>
+    <string name="quantity_error">Quantity cannot be negative</string>
+    <string name="device_error">Error in saving devices</string>
+    <string name="device_saved">Device saved in the inventory successfully</string>
+</resources>

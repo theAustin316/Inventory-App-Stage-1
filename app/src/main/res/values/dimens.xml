@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="info_padding">18dp</dimen>
+    <dimen name="fab_margin">40dp</dimen>
+    <dimen name="editor_padding">20dp</dimen>
+    <dimen name="device_info_width">0dp</dimen>
+    <dimen name="device_info_marginTop">12dp</dimen>
+    <dimen name="text_Size">18sp</dimen>
+    <dimen name="supplier_marginTop">24dp</dimen>
+</resources>
