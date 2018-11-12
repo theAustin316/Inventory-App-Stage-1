@@ -4,9 +4,16 @@ import android.provider.BaseColumns;
 
 public class PhoneInventoryContract {
 
+    // To prevent someone from accidentally instantiating the contract class,
+    // we give it an empty constructor.
     private PhoneInventoryContract() {
 
     }
+
+    /**
+     * Inner class that defines constant values for the devices database table.
+     * Each entry in the table represents a single device.
+     */
     public static final class DeviceEntry implements BaseColumns {
 
         private DeviceEntry() {

@@ -12,8 +12,12 @@ import android.widget.TextView;
 import com.example.vivek.inventoryapp.data.PhoneInventoryContract;
 import com.example.vivek.inventoryapp.data.PhoneInventoryDBHelper;
 
+/**
+ * Displays list of devices that were entered and stored in the app.
+ */
 public class CatalogActivity extends AppCompatActivity {
 
+    /** Database helper that will provide us access to the database */
     private PhoneInventoryDBHelper dbHelper;
 
     @Override
@@ -40,8 +44,8 @@ public class CatalogActivity extends AppCompatActivity {
         // Create and/or open a database to read from it
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
-        // Perform this raw SQL query "SELECT * FROM books"
-        // to get a Cursor that contains all rows from the books table.
+        // Perform this raw SQL query "SELECT * FROM devices"
+        // to get a Cursor that contains all rows from the device table.
         String[] projection = {
                 PhoneInventoryContract.DeviceEntry._ID,
                 PhoneInventoryContract.DeviceEntry.COLUMN_DEVICE_NAME,
@@ -51,7 +55,7 @@ public class CatalogActivity extends AppCompatActivity {
                 PhoneInventoryContract.DeviceEntry.COLUMN_SUPPLIER_PHONE_NO,
         };
 
-
+        // perform  a query on devices table
         Cursor cursor;
         cursor = db.query(PhoneInventoryContract.DeviceEntry.TABLE_NAME,
                 projection,
@@ -65,6 +69,17 @@ public class CatalogActivity extends AppCompatActivity {
         return cursor;
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        displayDatabaseInfo();
+    }
+
+
+    /**
+     * Temporary helper method to display information in the onscreen TextView about the state of
+     * the devices database.
+     */
     private void displayDatabaseInfo() {
 
         Cursor cursor = queryData();
@@ -103,11 +118,4 @@ public class CatalogActivity extends AppCompatActivity {
             cursor.close();
         }
     }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        displayDatabaseInfo();
-    }
-
 }
