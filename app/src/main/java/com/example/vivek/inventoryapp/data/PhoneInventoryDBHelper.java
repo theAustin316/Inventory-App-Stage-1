@@ -32,14 +32,14 @@ public class PhoneInventoryDBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
         // Create a String that contains the SQL statement to create the pets table
-        String SQL_CREATE_BOOKS_TABLE = "CREATE TABLE " + PhoneInventoryContract.DeviceEntry.TABLE_NAME + " ("
+        String SQL_CREATE_DEVICES_TABLE = "CREATE TABLE " + PhoneInventoryContract.DeviceEntry.TABLE_NAME + " ("
                 + PhoneInventoryContract.DeviceEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + PhoneInventoryContract.DeviceEntry.COLUMN_DEVICE_NAME + " TEXT NOT NULL, "
                 + PhoneInventoryContract.DeviceEntry.COLUMN_DEVICE_COST + " INTEGER NOT NULL, "
                 + PhoneInventoryContract.DeviceEntry.COLUMN_DEVICE_QUANTITY + " INTEGER NOT NULL, "
                 + PhoneInventoryContract.DeviceEntry.COLUMN_SUPPLIER_NAME + " TEXT NOT NULL, "
                 + PhoneInventoryContract.DeviceEntry.COLUMN_SUPPLIER_PHONE_NO + " TEXT NOT NULL );";
-        sqLiteDatabase.execSQL(SQL_CREATE_BOOKS_TABLE);
+        sqLiteDatabase.execSQL(SQL_CREATE_DEVICES_TABLE);
     }
 
     @Override
