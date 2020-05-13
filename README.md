@@ -22,3 +22,4 @@ Following are some of the screenshots from the app :
 
 ![screenshot_20181111-203039](https://user-images.githubusercontent.com/37339485/48314694-fb8d7c00-e5f2-11e8-939b-70f9c546af3d.jpeg)
 
+I am editing the README file. Adding some more details about the project description
